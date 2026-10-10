@@ -1,0 +1,23 @@
+{
+  "name": "dronetv-assistant-backend",
+  "version": "1.0.0",
+  "description": "REST API for the DroneTV AI Support & Lead Assistant",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "db:init": "node src/initDb.js",
+    "db:seed": "node src/initDb.js --seed"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.0",
+    "zod": "^3.23.8"
+  }
+}

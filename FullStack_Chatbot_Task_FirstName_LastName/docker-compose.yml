@@ -1,0 +1,14 @@
+# Optional: start PostgreSQL quickly with `docker compose up -d`
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: dronetv_assistant
+    ports:
+      - "5432:5432"
+    volumes:
+      - dronetv_pgdata:/var/lib/postgresql/data
+volumes:
+  dronetv_pgdata:
